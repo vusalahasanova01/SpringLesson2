@@ -13,7 +13,8 @@ import secondLesson.example.demoLesson.service.Formatter;
 @RequestMapping("fmt")
 public class FormatterController {
   private final Formatter f;  //WAY #3
-  public FormatterController(@Qualifier("formatterLower") Formatter f){
+  public FormatterController(@Qualifier("formatterLower") Formatter f){  //we write class name with lower case
+    // beacuse, class name situated bean with lower case
     this.f = f;
   }
 
