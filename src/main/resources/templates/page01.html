@@ -12,14 +12,15 @@
 <table border="1">
     <thead>
     <tr>
-        <th></th>
-        <th></th>
+        <td th:text="${header.name}"></td>
+        <td th:text="${header.price}"></td>
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <th></th>
-        <th></th>
+    <tr th:each="line: ${lines}">
+        <td th:text="${line.getName()}"></td>
+<!--        <td th:text="${line.getPrice()}"></td>-->
+        <td th:text="${#numbers.formatDecimal(line.getPrice(),1,3)}"></td>
     </tr>
     </tbody>
 </table>
